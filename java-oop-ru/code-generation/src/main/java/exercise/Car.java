@@ -23,9 +23,8 @@ class Car {
     // BEGIN
     public String serialize() throws JsonProcessingException {
         ObjectMapper mapper = new ObjectMapper();
-        Car car = new Car(this.id, this.brand, this.model, this.color, this.owner);
         // mapper.enable(SerializationFeature.INDENT_OUTPUT);
-        return mapper.writeValueAsString(car);
+        return mapper.writeValueAsString(this);
     }
 
     public static Car unserialize(String json) throws IOException {
