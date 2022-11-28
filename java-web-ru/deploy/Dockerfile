@@ -2,6 +2,6 @@ FROM gradle:7.4.2-jdk17
 
 WORKDIR /java-web-ru/deploy
 
-RUN gradle installDist
+RUN make install
 
 CMD ./build/install/deploy/bin/deploy
